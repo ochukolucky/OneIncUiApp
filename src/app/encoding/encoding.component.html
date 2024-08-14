@@ -1,0 +1,24 @@
+<div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+    <div class="card shadow">
+    <div class="card-body">
+    <div class="mb-4">
+    <label for="inputText" class="form-label">Input Text</label>
+    <input type="text" class="form-control" id="inputText" [(ngModel)]="inputText" [disabled]="isEncoding" placeholder="Enter text to encode">
+    </div>
+    <div class="d-flex justify-content-between mb-4">
+    <button class="btn btn-primary" (click)="startEncoding()" [disabled]="isEncoding || !inputText">
+    <i class="bi bi-play-fill"></i> Convert
+    </button>
+    <button class="btn btn-secondary" (click)="cancelEncoding()" [disabled]="!isEncoding">
+    <i class="bi bi-stop-fill"></i> Cancel
+    </button>
+    </div>
+    <div>
+    <label for="encodedText" class="form-label">Encoded Text</label>
+    <textarea class="form-control" id="encodedText" rows="3" [value]="encodedText" readonly></textarea>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
